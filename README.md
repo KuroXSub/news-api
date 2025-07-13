@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Aplikasi Berita - Proyek React</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div class="highlight">
+    Aplikasi berita modern yang dibangun dengan React.js untuk menampilkan artikel berita dari berbagai sumber menggunakan NewsAPI.
+</div>
 
-## Available Scripts
+<h2>Fitur Utama</h2>
+<ul>
+    <li>📰 Menampilkan berita utama terbaru</li>
+    <li>🔍 Pencarian berita berdasarkan kata kunci</li>
+    <li>🗂 Filter berita berdasarkan kategori (bisnis, hiburan, olahraga, dll)</li>
+    <li>📱 Desain responsif untuk semua perangkat</li>
+    <li>🔢 Dukungan paginasi</li>
+    <li>🔒 Manajemen API key yang aman</li>
+</ul>
 
-In the project directory, you can run:
+<h2>Persyaratan Sistem</h2>
+<ul>
+    <li>Node.js (versi 22 atau lebih baru)</li>
+    <li>API key dari NewsAPI (tersedia versi gratis)</li>
+</ul>
 
-### `npm start`
+<h2>Panduan Instalasi</h2>
+<ol>
+    <li>Clone repository:
+        <pre><code>git clone https://github.com/KuroXSub/news-api.git
+cd aplikasi-berita</code></pre>
+    </li>
+    <li>Instal dependensi:
+        <pre><code>npm install</code></pre>
+    </li>
+    <li>Buat file <code>.env</code> di direktori utama:
+        <pre><code>REACT_APP_NEWS_API_KEY=api_key_anda_disini</code></pre>
+    </li>
+    <li>Mulai server pengembangan:
+        <pre><code>npm start</code></pre>
+    </li>
+</ol>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div class="note">
+    <strong>Catatan:</strong> Dapatkan API key gratis dari <a href="https://newsapi.org" target="_blank">newsapi.org</a>
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<h2>Cara Penggunaan</h2>
+<h3>Mode Pengembangan</h3>
+<p>Untuk menjalankan aplikasi dalam mode pengembangan:</p>
+<pre><code>npm start</code></pre>
+<p>Buka <a href="http://localhost:3000">http://localhost:3000</a> di browser.</p>
 
-### `npm test`
+<h2>Struktur Proyek</h2>
+<pre><code>src/
+├── components/       # Komponen React
+│   ├── NewsItem.js   # Komponen artikel berita
+│   ├── NewsList.js   # Daftar berita
+│   ├── SearchBar.js  # Komponen pencarian
+│   ├── CategoryFilter.js # Filter kategori
+│   └── Pagination.js # Kontrol paginasi
+├── services/
+│   └── newsApi.js    # Layanan API
+├── App.js           # Komponen utama
+├── App.css          # Gaya utama
+└── index.js         # Entry point</code></pre>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+</body>
+</html>
