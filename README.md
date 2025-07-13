@@ -29,7 +29,7 @@
 <ol>
     <li>Clone repository:
         <pre><code>git clone https://github.com/KuroXSub/news-api.git
-cd aplikasi-berita</code></pre>
+cd news-api</code></pre>
     </li>
     <li>Instal dependensi:
         <pre><code>npm install</code></pre>
@@ -63,7 +63,7 @@ cd aplikasi-berita</code></pre>
 ├── services/
 │   └── newsApi.js    # Layanan API
 ├── App.js           # Komponen utama
-├── App.css          # Gaya utama
+├── App.css          # Style utama
 └── index.js         # Entry point</code></pre>
 
 </body>
