@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-<h1>Aplikasi Berita - Proyek React</h1>
+<h1>Aplikasi Pencarian Berita Sederhana</h1>
 
 <div class="highlight">
     Aplikasi berita modern yang dibangun dengan React.js untuk menampilkan artikel berita dari berbagai sumber menggunakan NewsAPI.
