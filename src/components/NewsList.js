@@ -1,15 +1,17 @@
 import React from 'react';
-import NewsItem from './NewsItem';
+import NewsItem from './NewsItem'; // Buat komponen baru NewsItem
 
 const NewsList = ({ articles }) => {
   if (!articles || articles.length === 0) {
-    return <div className="no-news">No news found. Try a different search.</div>;
+    return <p className="text-center">Tidak ada berita yang ditemukan.</p>;
   }
 
   return (
-    <div className="news-list">
+    <div className="row g-4">
       {articles.map((article, index) => (
-        <NewsItem key={index} article={article} />
+        <div className="col-md-6 col-lg-4" key={article.url || index}>
+          <NewsItem article={article} />
+        </div>
       ))}
     </div>
   );
