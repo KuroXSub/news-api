@@ -1,97 +1,30 @@
 import React from 'react';
-import './Pagination.css';
 
 const Pagination = ({ currentPage, totalPages, onPageChange }) => {
-  const maxVisibleButtons = 5;
-  let startPage, endPage;
-
-  if (totalPages <= maxVisibleButtons) {
-    startPage = 1;
-    endPage = totalPages;
-  } else {
-    const maxButtonsBeforeCurrentPage = Math.floor(maxVisibleButtons / 2);
-    const maxButtonsAfterCurrentPage = Math.ceil(maxVisibleButtons / 2) - 1;
-    
-    if (currentPage <= maxButtonsBeforeCurrentPage) {
-      startPage = 1;
-      endPage = maxVisibleButtons;
-    } else if (currentPage + maxButtonsAfterCurrentPage >= totalPages) {
-      startPage = totalPages - maxVisibleButtons + 1;
-      endPage = totalPages;
-    } else {
-      startPage = currentPage - maxButtonsBeforeCurrentPage;
-      endPage = currentPage + maxButtonsAfterCurrentPage;
-    }
-  }
-
-  const pageNumbers = Array.from({ length: endPage - startPage + 1 }, (_, i) => startPage + i);
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <div className="pagination">
-      <button
-        onClick={() => onPageChange(1)}
-        disabled={currentPage === 1}
-        className="pagination-button"
-      >
-        &laquo;
-      </button>
-      <button
-        onClick={() => onPageChange(currentPage - 1)}
-        disabled={currentPage === 1}
-        className="pagination-button"
-      >
-        &lsaquo;
-      </button>
-
-      {startPage > 1 && (
-        <>
-          <button
-            onClick={() => onPageChange(1)}
-            className="pagination-button"
-          >
-            1
+    <nav className="d-flex justify-content-center mt-4">
+      <ul className="pagination">
+        <li className={`page-item ${currentPage === 1 ? 'disabled' : ''}`}>
+          <button className="page-link" onClick={() => onPageChange(currentPage - 1)}>
+            Previous
           </button>
-          {startPage > 2 && <span className="pagination-ellipsis">...</span>}
-        </>
-      )}
-
-      {pageNumbers.map(number => (
-        <button
-          key={number}
-          onClick={() => onPageChange(number)}
-          className={`pagination-button ${currentPage === number ? 'active' : ''}`}
-        >
-          {number}
-        </button>
-      ))}
-
-      {endPage < totalPages && (
-        <>
-          {endPage < totalPages - 1 && <span className="pagination-ellipsis">...</span>}
-          <button
-            onClick={() => onPageChange(totalPages)}
-            className="pagination-button"
-          >
-            {totalPages}
+        </li>
+        {pages.map(page => (
+          <li key={page} className={`page-item ${currentPage === page ? 'active' : ''}`}>
+            <button className="page-link" onClick={() => onPageChange(page)}>
+              {page}
+            </button>
+          </li>
+        ))}
+        <li className={`page-item ${currentPage === totalPages ? 'disabled' : ''}`}>
+          <button className="page-link" onClick={() => onPageChange(currentPage + 1)}>
+            Next
           </button>
-        </>
-      )}
-
-      <button
-        onClick={() => onPageChange(currentPage + 1)}
-        disabled={currentPage === totalPages}
-        className="pagination-button"
-      >
-        &rsaquo;
-      </button>
-      <button
-        onClick={() => onPageChange(totalPages)}
-        disabled={currentPage === totalPages}
-        className="pagination-button"
-      >
-        &raquo;
-      </button>
-    </div>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
