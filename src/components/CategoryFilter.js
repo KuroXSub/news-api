@@ -1,26 +1,21 @@
+// components/CategoryFilter.js
 import React from 'react';
 
-const categories = [
-  'business',
-  'entertainment',
-  'general',
-  'health',
-  'science',
-  'sports',
-  'technology'
-];
+const CategoryFilter = ({ onSelectCategory, selectedCategory }) => {
+  const categories = ['general', 'business', 'technology', 'entertainment', 'sports', 'health'];
 
-const CategoryFilter = ({ onSelectCategory }) => {
   return (
     <div className="category-filter">
-      <select onChange={(e) => onSelectCategory(e.target.value)}>
-        <option value="">All Categories</option>
-        {categories.map((category) => (
-          <option key={category} value={category}>
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </option>
-        ))}
-      </select>
+      {categories.map(category => (
+        <button
+          key={category}
+          className={`btn category-btn ${selectedCategory === category ? 'active' : ''}`}
+          onClick={() => onSelectCategory(category)}
+        >
+          {/* Mengubah huruf pertama menjadi kapital untuk tampilan */}
+          {category.charAt(0).toUpperCase() + category.slice(1)}
+        </button>
+      ))}
     </div>
   );
 };
