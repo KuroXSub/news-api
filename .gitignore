@@ -13,6 +13,7 @@
 
 # misc
 .DS_Store
+.dev.vars
 .env
 .env.local
 .env.development.local
@@ -20,5 +21,6 @@
 .env.production.local
 
 npm-debug.log*
+/.wrangler
 yarn-debug.log*
 yarn-error.log*
