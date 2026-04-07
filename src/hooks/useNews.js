@@ -6,12 +6,10 @@ export function useNews(category = 'general') {
     endpoints.topHeadlines(category), 
     fetcher,
     {
-      revalidateOnFocus: false, // Mencegah fetch ulang tiap kali ganti tab browser (hemat kuota API)
+      revalidateOnFocus: false,
     }
   );
 
-  // NewsAPI kadang mengembalikan artikel tanpa judul atau status "Removed"
-  // Kita filter artikel-artikel cacat tersebut di sini
   const validArticles = data?.articles?.filter(
     article => article.title && article.title !== '[Removed]' && article.urlToImage
   ) || [];

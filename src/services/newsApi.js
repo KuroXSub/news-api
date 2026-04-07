@@ -10,6 +10,5 @@ export const fetcher = async (url) => {
 };
 
 export const endpoints = {
-  // Hanya mengirimkan kategori, API key sudah diurus oleh backend Cloudflare
   topHeadlines: (category = 'general') => `${BASE_URL}?category=${category}`
 };

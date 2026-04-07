@@ -1,6 +1,5 @@
-/* App.css (Versi Final) */
+/* App.css */
 
-/* 1. Sistem Tema (Variabel CSS) */
 :root {
   --bg-color: #f8f9fa;
   --text-color: #212529;
@@ -31,7 +30,6 @@
   --category-btn-active-text: #000;
 }
 
-/* 2. Gaya Dasar & Header */
 .app {
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -51,7 +49,6 @@
   color: var(--text-color);
 }
 
-/* 3. Tombol Mode Gelap (Lebih Terlihat) */
 .theme-switcher-btn {
   font-size: 1.2rem;
   background-color: var(--category-btn-bg);
@@ -68,32 +65,28 @@
   transform: scale(1.1);
 }
 
-/* 4. GAYA KONTROL HEADER BARU (Flexbox) */
 .header-controls {
   display: flex;
-  flex-wrap: wrap; /* Agar responsif di layar kecil */
+  flex-wrap: wrap;
   gap: 1rem;
   align-items: center;
 }
 
-/* Search bar akan mengambil sisa ruang */
 .header-controls .search-bar {
   flex-grow: 1;
-  min-width: 200px; /* Lebar minimum untuk search bar */
+  min-width: 200px;
   background-color: var(--input-bg);
   color: var(--text-color);
   border-color: var(--input-border);
 }
 
-/* Penampung untuk tombol kategori */
 .category-filter {
   display: flex;
-  flex-wrap: nowrap; /* Agar tidak turun baris */
-  overflow-x: auto; /* Bisa di-scroll horizontal di layar kecil */
-  padding-bottom: 5px; /* Ruang untuk scrollbar */
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding-bottom: 5px;
 }
 
-/* Tombol-tombol kategori */
 .category-btn {
   white-space: nowrap;
   background-color: var(--category-btn-bg);
@@ -112,7 +105,6 @@
   font-weight: bold;
 }
 
-/* 5. Gaya untuk Kartu Berita (NewsItem) */
 .card-news {
   background-color: var(--card-bg);
   border-color: var(--card-border);
@@ -137,7 +129,6 @@
 }
 .title-link:hover { color: var(--primary-color); }
 
-/* 6. PERBAIKAN BUG DARK MODE PADA TEKS KARTU */
 .dark-mode .card-news .card-title a,
 .dark-mode .card-news .card-text,
 .dark-mode .card-news .text-body-secondary {
@@ -148,7 +139,6 @@
   opacity: 0.7;
 }
 
-/* 7. Tombol Scroll-to-Top */
 .scroll-to-top {
   position: fixed;
   bottom: 20px;

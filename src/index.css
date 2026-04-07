@@ -26,7 +26,6 @@
   }
 
   body {
-    /* Menerapkan variabel dan efek transisi yang mulus saat tema diganti */
     @apply bg-background text-foreground transition-colors duration-500 antialiased selection:bg-accent selection:text-white;
   }
 }
