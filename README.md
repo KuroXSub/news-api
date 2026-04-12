@@ -1,13 +1,22 @@
 # KuroNews - Aplikasi Pencarian Berita Modern
 
+<div align="center">
+
+[![GitHub stars](https://img.shields.io/github/stars/KuroXSub/news-api?style=for-the-badge)](https://github.com/KuroXSub/news-api/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/KuroXSub/news-api?style=for-the-badge)](https://github.com/KuroXSub/news-api/network)
+[![GitHub issues](https://img.shields.io/github/issues/KuroXSub/news-api?style=for-the-badge)](https://github.com/KuroXSub/news-api/issues)
+
+</div>
+
+
 > Aplikasi berita modern yang dibangun dengan React.js dan Tailwind CSS untuk menampilkan artikel berita dari berbagai sumber menggunakan NewsAPI.
 
 ## Fitur Utama
-* 📰 Menampilkan berita utama terbaru dengan layout asimetris (Bento Grid)
-* 🎨 Mendukung tema dinamis (*Dark Mode* dan *Light Mode*)
-* 🗂 Filter berita instan berdasarkan kategori (Teknologi, Bisnis, Sains, dll)
-* ⚡ Transisi dan performa mulus menggunakan caching `SWR` dan animasi Skeleton
-* 🔒 Manajemen API key yang 100% aman (tersembunyi dari browser pengguna)
+* Menampilkan berita utama terbaru dengan layout asimetris (Bento Grid)
+* Mendukung tema dinamis (*Dark Mode* dan *Light Mode*)
+* Filter berita instan berdasarkan kategori (Teknologi, Bisnis, Sains, dll)
+* Transisi dan performa mulus menggunakan caching `SWR` dan animasi Skeleton
+* Manajemen API key yang 100% aman (tersembunyi dari browser pengguna)
 
 ## Persyaratan Sistem
 * Node.js (versi 22 atau lebih baru)
@@ -78,3 +87,11 @@ news-api/
 ├── package.json
 └── README.md
 ```
+
+## Pengembang
+
+Dikembangkan oleh Qurrota sebagai bagian dari ekosistem KuroSapa Labs.
+
+Website Pengembang: [kuroxsub.my.id](https://kuroxsub.my.id)
+
+GitHub: @KuroXSub
